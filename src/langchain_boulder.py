@@ -3,7 +3,7 @@
  # @ Create Time: 2023-08-17 11:21:36
  # @ Modified by: Adam Zhang
  # @ Modified time: 2023-08-17 12:19:59
- # @ Description:
+ # @ Description: prompt design for boulder recsys
  '''
 
 
@@ -15,8 +15,10 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 
+# load environment variables for OPENAI access
 _ = load_dotenv(find_dotenv())
 openai_api_key = os.getenv("OPENAI_API_KEY")
+
 
 class LangchainBoulder:
     @staticmethod
@@ -64,6 +66,7 @@ class LangchainBoulder:
                      "third column is the style of the route such as slab, overhang, roof etc.",
         )
 
-        response = llm(prompt_template_routes.format(park_name=park_name, difficulty=difficulty))
+        response = llm(prompt_template_routes.format(
+            park_name=park_name, difficulty=difficulty))
 
         return response

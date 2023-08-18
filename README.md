@@ -6,7 +6,7 @@
 The goal is to have a tool to help climbers to
 - select nearby outdoor boulder park
 - select boulder problems based on their climbing level
-- make some recommendations
+- make some recommended boulder problems in a tabular format
 
 # Installation
 

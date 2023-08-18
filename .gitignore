@@ -7,6 +7,8 @@
 
 *.pyc
 
+# prototypes notebooks
 **/*.ipynb
+src/langchain_helper.py
 
-./src/langchain_helper.py
+
